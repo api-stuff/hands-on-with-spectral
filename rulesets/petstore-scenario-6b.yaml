@@ -1,0 +1,3 @@
+extends:
+  - ./petstore-scenario-5.yaml
+  - ./petstore-scenario-6a.yaml

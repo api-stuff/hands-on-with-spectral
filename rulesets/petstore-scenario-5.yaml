@@ -1,0 +1,11 @@
+extends:
+  - ./petstore-scenario-4.yaml
+functions: [responses]
+rules:
+  operation-2xx-response: off
+  default-response-fallback:
+    message: "Response object does not have 2xx operation or default set"
+    given: "$.paths.[*].[*].responses"
+    severity: error
+    then:
+      function: responses

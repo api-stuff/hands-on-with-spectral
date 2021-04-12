@@ -1,0 +1,28 @@
+{
+  "name": "hands-on-with-spectral",
+  "version": "1.0.0",
+  "description": "Show-and-tell demo materials for APIcon, 14th April 2021",
+  "main": "index.js",
+  "dependencies": {
+    "@stoplight/spectral": "^5.9.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "scripts": {
+    "lint": "spectral lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sensiblewood/hands-on-with-spectral.git"
+  },
+  "keywords": [
+    "spectral",
+    "openapi",
+    "lint"
+  ],
+  "author": "Chris Wood",
+  "license": "ISC"
+}

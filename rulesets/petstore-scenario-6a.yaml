@@ -1,0 +1,17 @@
+extends:
+  - ./petstore-scenario-5.yaml
+functions: [empty-object]
+rules:
+  security-must-be-enforced-for-unsafe-endpoints:
+    message: Security must be applied to "write" endpoints
+    severity: error
+    given: "$.paths.*[?(@property == 'post' || @property == 'put' || @property == 'patch' || @property == 'delete')]"
+    then:
+      - field: security
+        function: truthy
+  security-object-must-not-be-a-hacked-in-empty-object:
+    message: "{{error}}"
+    severity: error
+    given: "$.paths.*[?(@property == 'post' || @property == 'put' || @property == 'patch' || @property == 'delete')].security.*"
+    then:
+      function: empty-object

@@ -1,0 +1,11 @@
+extends:
+  - ./petstore-scenario-3.yaml
+rules:
+  hyphen-delimited-uris:
+    message: "Words in the path must be lowercase and delimited by a hyphen or concatenated, or be a path parameter"
+    severity: error
+    given: "$.paths[*]~"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^(?:\/(?:[a-z]+(?:-[a-z]+|)+|\\{[a-zA-Z]+\\}))+$"

@@ -1,0 +1,4 @@
+extends: spectral:oas
+rules:
+  operation-description: off
+  oas3-unused-components-schema: off
