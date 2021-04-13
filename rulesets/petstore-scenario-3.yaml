@@ -1,4 +1,5 @@
-extends: spectral:oas
+extends:
+  - ./petstore-scenario-2.yaml
 rules:
   operation-description: off
   oas3-unused-components-schema: off

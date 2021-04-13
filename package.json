@@ -13,7 +13,7 @@
     "husky": "^6.0.0"
   },
   "scripts": {
-    "lint": "spectral lint --fail-severity=warn --ruleset rulesets/petstore-scenario-6b.yaml",
+    "lint": "spectral lint",
     "prepare": "husky install"
   },
   "repository": {
