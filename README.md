@@ -4,19 +4,9 @@
 
 This repository accompanies the presentation at API Con by Chris Wood on 14th April 2021.
 
-## Scenarios:
-
-1. No ruleset
-2. Simple ruleset
-3. Warnings off
-4. Standardised URI format
-5. Ensure that Responses object for each Operation Object has at least a `default` response
-6. Ensure that all "write" operations have a security mechanism defined
-7. Ensure an OpenAPI document lints with zero errors or warnings on commit
-
 ## Flow
 
-The flow used in the presentation maps to the following steps:
+The intention is to show an increasingly level of maturity in the implementation. The intention is therefore to convey the following "flow":
 
 1. Start with nothing.
 2. Add a ruleset that extends the built-in Spectral ruleset.
@@ -26,7 +16,17 @@ The flow used in the presentation maps to the following steps:
 6. Implement a reusable ruleset that references IT Security standards.
 7. Add some automation using Husky and pre-commit hooks.
 
-## Commands from Presentation
+## Scenarios:
+
+1. No ruleset.
+2. Simple ruleset.
+3. Turn warnings off.
+4. Standardised the URI format.
+5. Ensure that Responses object for each Operation Object has at least a `default` response.
+6. Ensure that all "write" operations have a security mechanism defined.
+7. Implement a pre-commit hook to ensure an OpenAPI document lints with zero errors or warnings.
+
+## Commands in presentation
 
 ```bash
 # Scenario 1: Run the out-of-the-box command
