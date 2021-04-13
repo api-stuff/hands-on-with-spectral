@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+git status --porcelain | awk '/^ ?[AM].*(swagger|openapi).*\.(yaml|json|yml)/ { print $NF }' | xargs npm run lint --
