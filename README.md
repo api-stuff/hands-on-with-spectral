@@ -2,7 +2,7 @@
 
 ## Brief
 
-This repository accompanies the presentation at API Con by Chris Wood on 14th April 2021.
+This repository accompanies the presentation at API Con by Chris Wood on 14th April 2021. The slides themselves are [here](slides/20210414_hands_on_with_spectral.pdf).
 
 ## Flow
 
@@ -80,7 +80,6 @@ vimdiff examples/petstore-openapi-scenario-5.yaml examples/petstore-openapi-scen
 # Scenario 6: Run the merged ruleset against the Scenario 6 OpenAPI document
 spectral lint --ruleset rulesets/petstore-scenario-6b.yaml examples/petstore-openapi-scenario-6.yaml
 
-
 # Scenario 7: View the pre-commit script
 vi .husky/pre-commit
 
@@ -89,6 +88,8 @@ touch examples/petstore-openapi-scenario-7.yaml && git add examples/petstore-ope
 
 # Scenario 7: Attempt to commit the file
 git commit -a -m 'chore: Testing hooks'
+echo $?
+git status
 ```
 
 ## Husky Configuration
